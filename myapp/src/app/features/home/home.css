@@ -1,0 +1,11 @@
+.home_landingpage {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(
+        140deg,
+        rgb(66, 135, 245) 0%,
+        rgb(29, 59, 107) 60%,
+          rgb(222, 58, 145) 80%
+    )!important;
+    height: 100vh;
+}

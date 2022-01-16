@@ -1,0 +1,73 @@
+import React from 'react';
+import Map from "mapmyindia-react";
+class TestPlaceInput extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { address: '' };
+  }
+
+ 
+
+  render() {
+    return (
+
+        <Map
+        markers={[
+          {
+            position: [18.5314, 73.845],
+            draggable: true,
+            title: "Marker title",
+            onClick: e => {
+              console.log("clicked ");
+            },
+            onDragend: e => {
+              console.log("dragged");
+            }
+          }
+        ]}
+      />
+    //   <PlacesAutocomplete
+    //     value={this.state.address}
+    //     onChange={this.handleChange}
+    //     onSelect={this.handleSelect}
+    //   >
+    //     {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
+    //       <div>
+    //         <input
+    //           {...getInputProps({
+    //             placeholder: 'Search Places ...',
+    //             className: 'location-search-input',
+    //           })}
+    //         />
+    //         <div className="autocomplete-dropdown-container">
+    //           {loading && <div>Loading...</div>}
+    //           {suggestions.map(suggestion => {
+    //             const className = suggestion.active
+    //               ? 'suggestion-item--active'
+    //               : 'suggestion-item';
+    //             // inline style for demonstration purpose
+    //             const style = suggestion.active
+    //               ? { backgroundColor: '#fafafa', cursor: 'pointer' }
+    //               : { backgroundColor: '#ffffff', cursor: 'pointer' };
+    //             return (
+    //               <div
+    //                 {...getSuggestionItemProps(suggestion, {
+    //                   className,
+    //                   style,
+    //                 })}
+    //               >
+    //                 <span>{suggestion.description}</span>
+    //               </div>
+    //             );
+    //           })}
+    //         </div>
+    //       </div>
+    //     )}
+    //   </PlacesAutocomplete>
+    // );
+    )}
+}
+
+
+
+export default TestPlaceInput;
